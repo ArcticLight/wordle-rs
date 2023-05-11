@@ -2,7 +2,7 @@
 
 This project is basically a working learning example for myself. I'm implementing it as a project to learn the Rust programming language, and it is published here (and publicly) in the hope that you may find it useful to look at.
 
-> :warn:
+> **Warning**
 > THIS PROJECT IS NOT:
 > - **Good Rust**: While I'm trying to make this project cleanly, I'm still learning, probably even right now. The code may still be weird.
 > - **Intended for you to play**: This is a project that's supposed to be a toy problem to learn a programming language. It doesn't offer a great experience. Although you *can* play it with the CLI tool, you should probably play Wordle at [its official site at the NYTimes](https://www.nytimes.com/games/wordle/index.html) (you don't even need to pay for anything).
