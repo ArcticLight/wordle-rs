@@ -2,6 +2,8 @@
 
 This project is basically a working learning example for myself. I'm implementing it as a project to learn the Rust programming language, and it is published here (and publicly) in the hope that you may find it useful to look at.
 
+At some point in the future, I may attempt a writeup of this learning experience in a set of blog posts explaining how I arrived at certain solutions, and the learning process I went through, in the hope that it helps out new learners of Rust.
+
 > **Warning**
 > THIS PROJECT IS NOT:
 > - **Good Rust**: While I'm trying to make this project cleanly, I'm still learning, probably even right now. The code may still be weird.
@@ -37,6 +39,9 @@ This is the basic outline of what I'm working through. I've ordered these ideas 
   - _How much memory does the mega-table take up?_
 - [ ] [Information theory][3b1b]: Use E[_I_] to make guesses instead of random guesses.
 - [ ] Probability: _Sample_ guesses instead, using the space of E[_I_] as the word distribution, so guesses can still be random-ish
+    > **Note**
+    > The strategy of _sampling_ from E[_I_] is a strictly-worse Wordle player than the strategy of taking some top element from E[_I_].
+    > However, I also think it's an interesting exercise (how to convert E[_I_] to some distribution suitable for sampling _from_?) and also a more "interesting" player than always-choosing-the-best-answer.
   - [ ] Animate the sampling-random player in the manner from [the 3b1b video][3b1b]
 - [ ] ...
 

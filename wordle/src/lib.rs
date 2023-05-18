@@ -9,8 +9,8 @@ pub const BLANK: u8 = u8::MAX;
 
 #[derive(Clone, Copy)]
 pub struct Game {
-    grid: [Row; 6],
-    answer: Row,
+    pub grid: [Row; 6],
+    pub answer: Row,
 }
 
 pub enum TurnResult {
@@ -21,7 +21,7 @@ pub enum TurnResult {
 }
 
 impl Display for Row {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         for i in 0..5 {
             write!(f, "{}", (self.0[i] + 'a' as u8) as char)?
         }
@@ -147,9 +147,9 @@ fn color_word(guess: &Row, correct: &Row) -> [Color; 5] {
 
 #[cfg(test)]
 mod tests {
-    use crate::wordle::color_word;
-    use crate::wordle::Color::*;
-    use crate::wordle::Row;
+    use crate::color_word;
+    use crate::Color::*;
+    use crate::Row;
 
     #[test]
     fn test_colors() {

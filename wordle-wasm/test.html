@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test - Wordle JS/Rust+WASM</title>
+</head>
+<body>
+  <script type="module">
+    import { default as init, JSGame } from './pkg/wordle_wasm.js';
+    await init();
+    let board = new JSGame('blank');
+    board = board.guess('toast')
+    console.log(board.get_board());
+  </script>
+</body>
+</html>

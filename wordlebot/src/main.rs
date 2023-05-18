@@ -1,7 +1,6 @@
 use rand::prelude::*;
 use std::io::{self, Write};
 
-mod wordle;
 use wordle::TurnResult::*;
 use wordle::{data::ANSWERS_S, Game, BLANK};
 
