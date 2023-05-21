@@ -137,17 +137,12 @@ impl Display for Game {
         writeln!(f, "\x1b[37m┌──────────┐")?;
         for (i, row) in self.grid.iter().enumerate() {
             write!(f, "│")?;
-            for (j, color) in colors[i].iter().enumerate() {
+            for (j, &color) in colors[i].iter().enumerate() {
                 if row.0[j] == BLANK {
                     write!(f, "{}", gray('▢'))?;
                 } else {
                     let c = char::from_u32(row.0[j] as u32 + '🄰' as u32).unwrap();
-                    match color {
-                        Color::White => write!(f, "  ")?,
-                        Color::Green => write!(f, "{}", green(c))?,
-                        Color::Yellow => write!(f, "{}", yellow(c))?,
-                        Color::Gray => write!(f, "{}", gray(c))?,
-                    }
+                    write!(f, "{}", chalk(c, color))?;
                 }
             }
             write!(f, "│ ")?;
