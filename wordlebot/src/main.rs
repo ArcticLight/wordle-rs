@@ -30,12 +30,12 @@ fn main() {
 
         match game.guess(guessed_word) {
             Some(g2) => game = g2,
-            Lose(word) => {
-                println!("You lose! The word was {word}");
+            Lose(end) => {
+                println!("You lose!\n{end}");
                 break;
             }
-            Win(word) => {
-                println!("You win! The word was {word}");
+            Win(end) => {
+                println!("You win!\n{}", end.result_mojis());
                 break;
             }
             Error(m) => println!("ERROR: {m}"),
