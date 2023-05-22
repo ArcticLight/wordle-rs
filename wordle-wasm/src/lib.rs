@@ -13,6 +13,7 @@ pub struct JSBoard(String, String, String, String, String, String);
 impl JSGame {
   #[wasm_bindgen(constructor)]
   pub fn new(word: &str) -> Result<JSGame, String> {
+    utils::set_panic_hook();
     if word.len() != 5 {
       return Err("Word must be 5 letters".into());
     }
